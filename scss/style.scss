@@ -1,0 +1,129 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $yellow;
+    color: $black;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 24px;
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid $black;
+    box-shadow: 8px 8px 0px #000;
+
+    @media screen and (min-width: 768px) {
+        width: 384px;
+    }
+
+    &__image {
+        width: 100%;
+        display: flex; 
+        
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__badge {
+        background-color: $yellow;
+        color: $black;
+        font-weight: $fw-eb;
+        font-size: $font-size-s;
+        padding: 4px 12px;
+        border-radius: 4px;
+        line-height: 1.5;
+
+        @media screen and (min-width: 768px) {
+            font-size: $font-size-m;
+        }
+
+        &-wrapper {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    &__date {
+        font-size: $font-size-s;
+        font-weight: $fw-med;
+        line-height: 1.5;
+
+        @media screen and (min-width: 768px) {
+            font-size: $font-size-m;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: $fw-eb;
+        line-height: 1.5;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__description {
+        font-weight: $fw-med;
+        color: $grey; 
+        line-height: 1.5;
+        font-size: $font-size-m;
+
+        @media screen and (min-width: 768px) {
+            font-size: $font-size;
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &-image {
+            display: flex;
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
+
+        &-name {
+            font-weight: $fw-eb;
+            line-height: 1.5;
+            font-size: $font-size-m;
+        }
+    }
+}
